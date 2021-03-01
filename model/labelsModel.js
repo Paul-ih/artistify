@@ -25,4 +25,6 @@ logo: {
 
 })
 
-const labelModel = mongoose.model("labels", labelSchema)
+const LabelModel = mongoose.model("labels", labelSchema)
+
+module.exports = LabelModel
