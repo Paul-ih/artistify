@@ -1,1 +1,10 @@
 <h1>Here are the artists</h1>
+
+<div>
+    {{#each artists}}
+    <p>{{this.name}}</p>
+    <p>{{this.isBand}}</p>
+    <p>{{this.description}}</p>
+    <img src="{{this.picture}}" alt="image">
+    {{/each}}
+</div>
