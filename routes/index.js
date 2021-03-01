@@ -26,6 +26,13 @@ router.get("/dashboard/artist", (req, res, next) => {
  
 });
 
+router.post("/dashboard/artist/delete/:id", (req, res, next)=>{
+  ArtistModel.findByIdAndDelete(req.params.id)
+  .then(()=>res.redirect('/dashboard/artist'))
+  .catch(next)
+})
+
+
 //Router Labels 
 
 router.get("/dashboard/label", (req, res, next) => {
@@ -37,6 +44,12 @@ router.get("/dashboard/label", (req, res, next) => {
     })
     .catch(next);
 });
+
+router.post("/dashboard/label/delete/:id", (req, res, next)=>{
+  LabelModel.findByIdAndDelete(req.params.id)
+  .then(()=>res.redirect('/dashboard/label'))
+  .catch(next)
+})
 
 //Router Styles
 
@@ -50,6 +63,11 @@ router.get("/dashboard/style", (req, res, next) => {
     .catch(next);
 });
 
+router.post("/dashboard/style/delete/:id", (req, res, next)=>{
+  StylesModel.findByIdAndDelete(req.params.id)
+  .then(()=>res.redirect('/dashboard/style'))
+  .catch(next)
+})
 
 
 

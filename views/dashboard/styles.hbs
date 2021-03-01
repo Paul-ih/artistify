@@ -5,5 +5,8 @@
     <p>{{this.name}}</p>
     <p>{{this.color}}</p>
     <p> <a href="{{this.wikiURL}}">{{this.wikiURL}}</a></p>
+    <form method="post" action="/dashboard/style/delete/{{this._id}}">
+        <button>Delete</button>
+</form>
     {{/each}}
 </div>
