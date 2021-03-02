@@ -43,6 +43,7 @@ router.get("/dashboard/artist/create", (req, res, next)=>{
 router.post("/dashboard/artist/create", uploader.single("picture"), (req, res, next) => {
   const {name, isBand, description } = req.body;
   let picture;
+  console.log(req.file)
   if (req.file) {
     picture = req.file.path;
   }
